@@ -1,0 +1,21 @@
+[package]
+name = "fim-whodata-ebpf-bpf"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "fim-whodata-ebpf"
+path = "src/main.rs"
+
+[dependencies]
+fim-whodata-ebpf-common = { path = "../fim-whodata-ebpf-common", features = ["ebpf"] }
+aya-bpf = "0.1"
+aya-log-ebpf = "0.1"
+
+[profile.release]
+debug = true
+lto = true
+opt-level = "z"
+overflow-checks = false
+panic = "abort"
+strip = "debuginfo"
