@@ -1,0 +1,12 @@
+[package]
+name = "fim-whodata-ebpf-common"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya-bpf = { version = "0.1", optional = true }
+
+[features]
+default = []
+user = []
+ebpf = ["aya-bpf"]
