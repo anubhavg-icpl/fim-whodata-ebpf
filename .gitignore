@@ -1,1 +1,11 @@
-/target
+/target/
+Cargo.lock
+*.o
+*.so
+*.dylib
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
